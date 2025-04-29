@@ -1,0 +1,11 @@
+.form-container {
+  max-width: 700px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.form-title {
+  margin-bottom: 25px;
+}

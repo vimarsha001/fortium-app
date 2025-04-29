@@ -1,0 +1,27 @@
+.solution-card {
+  text-align: center;
+  padding: 20px;
+}
+.solution-card img {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.solution-title {
+  font-weight: bold;
+  color: #1d2d5c;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+.solution-subtitle {
+  font-weight: 500;
+  color: #333;
+  margin-top: 5px;
+}
+.solution-description {
+  color: #555;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
