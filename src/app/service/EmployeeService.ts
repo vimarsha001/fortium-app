@@ -13,14 +13,19 @@ export class EmployeeService {
     }),
   };
   constructor(private http: HttpClient) {}
-  private url = 'http://localhost:8080/customer/add';
+  
 
   addEmployee(employee: Employee): Observable<Employee> {
-    return this.http.post<Employee>(this.url, employee, this.httpOptions);
+    const url = 'http://localhost:8080/employee/add';
+    return this.http.post<Employee>(url, employee, this.httpOptions);
   }
   deleteEmployee(id: number): Observable<unknown> {
-    const url = `${this.url}/${id}`;
+    const url = `http://localhost:8080/employee/delete/${id}`;
     return this.http.delete(url, this.httpOptions)
   }
-  getAllEmployees(){}
+  getEmployeeById(id: number): Observable<Employee> {
+    const baseUrl = `http://localhost:8080/employee/search`;
+    return this.http.get<Employee>(`${baseUrl}/${id}`);
+  }
+  
 }

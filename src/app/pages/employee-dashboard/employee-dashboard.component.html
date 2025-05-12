@@ -3,25 +3,16 @@
   <table class="table table-striped table-bordered align-middle">
     <thead class="table-dark">
       <tr>
-        <th>#</th>
+        <th>ID</th>
         <th>Full Name</th>
+        <th>Phone</th>
         <th>Email</th>
         <th>Department</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>2</td>
-        <td>Jane Smith</td>
-        <td>janeexample.com</td>
-        <td>HR</td>
-        <td>
-          <a routerLink="/update-employee"><button class="btn btn-sm btn-warning me-2">Edit</button></a>
-          <a routerLink="/delete-employee"><button class="btn btn-sm btn-danger">Delete</button></a>
-        </td>
-      </tr>
+      <app-employee  *ngFor="let employee of listOfEmployees" [item]="employee"></app-employee>
     </tbody>
   </table>
 </div>
-

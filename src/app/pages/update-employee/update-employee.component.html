@@ -5,33 +5,28 @@
     <form>
       <div class="mb-3">
         <label for="fullName" class="form-label">Full Name</label>
-        <input type="text" class="form-control" id="fullName" maxlength="50" placeholder="Enter full name">
+        <input type="text" class="form-control" id="fullName" maxlength="50" placeholder="Enter full name" [(ngModel)]="employee.name" name="name">
       </div>
 
       <div class="mb-3">
         <label for="email" class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        <input type="email" class="form-control" id="email"  [(ngModel)]="employee.email" name="email">
       </div>
 
       <div class="mb-3">
         <label for="phone" class="form-label">Phone Number</label>
-        <input type="tel" class="form-control" id="phone" placeholder="Enter phone number">
+        <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" [(ngModel)]="employee.phone" name="phone">
       </div>
 
       <div class="mb-3">
-        <label for="department" class="form-label">Department</label>
-        <select class="form-select" id="department">
-          <option selected disabled>Choose...</option>
+        <label for="department" class="form-label" >Department</label>
+        <select class="form-select" id="department" [(ngModel)]="employee.department" name="department">
+          <option selected disabled></option>
           <option>HR</option>
           <option>Engineering</option>
           <option>Sales</option>
           <option>Marketing</option>
         </select>
-      </div>
-
-      <div class="mb-3">
-        <label for="joiningDate" class="form-label">Joining Date</label>
-        <input type="date" class="form-control" id="joiningDate">
       </div>
 
       <div class="d-flex justify-content-between mt-4">

@@ -22,11 +22,11 @@ export const routes: Routes = [
         component: AddEmployeeComponent
     },
     {
-        path : 'delete-employee',
+        path : 'delete-employee/:id',
         component: DeleteEmployeeComponent
     },
     {
-        path : 'update-employee',
+        path : 'update-employee/:id',
         component: UpdateEmployeeComponent
     },
     {
