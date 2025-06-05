@@ -10,6 +10,7 @@
           placeholder="Enter full name"
           required
           maxlength="100"
+          [(ngModel)]="employee.name" name="name"
         />
       </div>
 
@@ -21,6 +22,7 @@
           id="email"
           placeholder="email@example.com"
           required
+          [(ngModel)]="employee.email" name="email"
         />
       </div>
 
@@ -31,12 +33,13 @@
           class="form-control"
           id="phone"
           placeholder="Enter phone number"
+          [(ngModel)]="employee.phone" name="phone"
         />
       </div>
 
       <div class="mb-3">
         <label for="department" class="form-label">Department</label>
-        <select class="form-select" id="department" required>
+        <select class="form-select" id="department" required [(ngModel)]="employee.department" name="department">
           <option selected disabled>Choose...</option>
           <option>HR</option>
           <option>IT</option>
@@ -45,8 +48,9 @@
         </select>
       </div>
       <div class="d-flex justify-content-between">
-        <button type="submit" class="btn btn-primary" (click)="onclick($event)">Submit</button>
-        <button type="reset" class="btn btn-secondary">Cancel</button>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit(employee.name,employee.phone,employee.email,employee.department)">Submit</button>
+        <button type="reset" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
       </div>
   </div>
 </div>
+

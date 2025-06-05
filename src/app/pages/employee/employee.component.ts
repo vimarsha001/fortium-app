@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Employee } from '../../model/Employee';
@@ -10,15 +10,6 @@ import { Employee } from '../../model/Employee';
   styleUrl: './employee.component.css'
 })
 export class EmployeeComponent{
-  @Input()
-  public item:any;
-  constructor(private router: Router) {}
-
-  onDelete(id : number){
-    this.router.navigate(['/delete-employee',id]);
-  }
-  onUpdate(id : number){
-    this.router.navigate(['/update-employee',id]);
-  }
+  
 
 }

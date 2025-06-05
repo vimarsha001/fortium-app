@@ -27,5 +27,10 @@ export class EmployeeService {
     const baseUrl = `http://localhost:8080/employee/search`;
     return this.http.get<Employee>(`${baseUrl}/${id}`);
   }
+  updateEmployee(id: number,employee:Employee){
+    const baseUrl = `http://localhost:8080/employee/update`;
+    return this.http.patch<Employee>(`${baseUrl}/${id}`,employee);
+  }
+
   
 }
