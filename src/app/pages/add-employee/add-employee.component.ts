@@ -46,7 +46,9 @@ export class AddEmployeeComponent implements OnInit {
     }
     if (name.length == 0) {
       alert('Name cannot be null!!');
-    } else {
+    }else if(name.length>100){ 
+      alert('Name must be less than 100 characters!');
+    }else {
       this.notNull = true;
     }
     if (0 < phone.length && phone.length < 10) {
